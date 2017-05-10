@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+<head> 
+      <link rel="stylesheet" href="css/style.css"> 
+      <style type="text/css">
+      	select{background-color: white;
+      		color: red;}
+      </style>
+</head>
+
+
+  <body>
+  <br>
+  <br>
+  <br>
+  <br><br><br>
+<div class="container">
+	<section id="content">
+		<form enctype="multipart/form-data" id="myForm" action="process.php" method="POST">
+			<h1>ADD NEW BOOK</h1>
+			<div>
+				<input type="text" placeholder="Book Name" required="" name="book_name" />
+			</div>
+			<div>
+				<input type="text" placeholder="Author Name" required="" name="author_name" />
+			</div>
+			
+			<div>
+				<input type="text" placeholder="Edition"  name="edition" />
+			</div class="styled-select slate">
+
+			Book Type:<select name="types">
+			    <option value="Science_fiction">Science fiction</option>
+ 			    <option value="Drama">Drama</option>
+ 			    <option value="Action_and_Adventure">Action and Adventure</option>
+ 			    <option value="Romance">Romance</option>
+ 			    <option value="Mystery">Mystery</option>
+ 			    <option value="Horror">Horror</option>
+ 			    <option value="Self_help">Self help</option>
+ 			    <option value="Health">Health</option>
+ 			    <option value="Self_help">Self help</option>
+ 			    <option value="Guide">Guide</option>
+ 			    <option value="Travel">Travel</option>
+ 			    <option value="Children's">Children's</option>
+ 			    <option value="Religion_Spirituality_New Age">TReligion, Spirituality & New Age</option>
+ 			    <option value="Children's">Children's</option>
+ 			    <option value="Science">Science</option>
+ 			    <option value="Children's">Children's</option>
+ 			    <option value="Children's">Children's</option>
+ 			    <option value="Children's">Children's</option>
+ 			    <option value="Children's">Children's</option>
+
+
+			</select>
+
+			<div>
+				<input type="text" placeholder="Add a Review"  name="review" />
+			</div>
+			<div>
+				<input type="hidden" name="MAX_FILE_SIZE" value="912000" />
+     			<input name="userfile" type="file" />
+			</div>
+			<div>
+				<input type="text" placeholder="Download Link" required="" name="link" />
+			</div>
+			
+			<div>
+			<center>
+				<input type="submit" value="Submit" />
+			</center>
+			</div>
+			
+		</form><!-- form -->
+		
+	</section><!-- content -->
+</div><!-- container -->
+
+
+</body>
+</html>

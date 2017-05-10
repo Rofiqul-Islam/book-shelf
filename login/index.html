@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Login</title>
+  
+  
+  <link rel="stylesheet" href="css/style.css">
+  
+
+  <script type="text/javascript">
+	function finder(){
+
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+
+                if(this.readyState == 4 && this.status == 200)
+                   console.log(this.responseText);
+                if(this.responseText.match("1"))
+                {
+                    window.href.location="../shelve/index.php";
+                }
+                else
+                    document.getElementById("showMessage").innerHTML = xhttp.responseText;
+
+
+
+            };
+
+
+            email = document.getElementById("username").value;
+            pass = document.getElementById("password").value;
+
+            document.cookie = "email="+email;
+            document.cookie = "pass="+pass;
+
+            xhttp.open("POST","login.php",true);
+            xhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhttp.send("email="+email+"&pass="+pass);
+
+        }
+		
+	
+	
+  </script>
+  
+</head>
+
+<body>
+ 
+  <br><br><br><br><br><br><br><br>
+  
+<div class="container">
+	<section id="content">
+		<form id="myForm" action="login.php" method="POST">
+			<h1>Login Form</h1>
+			<div>
+				<input type="text"  name="email" placeholder="Email"  required/>
+			</div>
+			<div>
+				<input type="password" name="pass" placeholder="password"  required/>
+			</div>
+			<div>
+				<input type="submit" value="Log in" />
+				<!--<a href="#">Lost your password?</a>-->
+				<a href="../register/index.html">Register</a>
+				<p id = "showMessage" ></p>
+			</div>
+		</form><!-- form -->
+		
+	</section><!-- content -->
+</div><!-- container -->
+
+</body>
+</html>

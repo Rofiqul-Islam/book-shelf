@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head> 
+      <link rel="stylesheet" href="css/style.css"> 
+</head>
+
+
+  <body>
+  <br>
+  <br>
+  <br>
+  <br><br><br>
+<div class="container">
+	<section id="content">
+		<form enctype="multipart/form-data" id="myForm" action="process.php" method="POST">
+			<h1>Registratoin</h1>
+			<div>
+				<input type="text" placeholder="Username" required="" name="username" />
+			</div>
+			<div>
+				<input type="text" placeholder="email" required="" name="email" />
+			</div>
+			<div>
+				<input type="text" placeholder="registration number" required="" name="reg_no" />
+			</div>
+			<div>
+				<input type="password" placeholder="Password" required="" name="password" />
+			</div>
+			<div>
+				<input type="hidden" name="MAX_FILE_SIZE" value="5120000" />
+     			<input name="userfile" type="file" />
+			</div>
+			
+			<div>
+			<center>
+				<input type="submit" value="Submit" />
+			</center>
+			</div>
+			
+		</form><!-- form -->
+		
+	</section><!-- content -->
+</div><!-- container -->
+
+
+</body>
+</html>
